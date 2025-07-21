@@ -320,8 +320,7 @@ export default function Index() {
                       <Icon name="MapPin" size={24} className="text-vbank-blue mt-1" />
                       <div>
                         <h4 className="font-semibold text-vbank-dark mb-1" style={{ fontFamily: 'Inter' }}>
-                          Адрес головного офиса
-                        </h4>
+</h4>
                         <p className="text-gray-600 font-normal" style={{ fontFamily: 'Roboto' }}></p>
                       </div>
                     </div>
