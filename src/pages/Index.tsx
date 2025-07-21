@@ -33,11 +33,7 @@ export default function Index() {
     { icon: 'HeadphonesIcon', title: 'Поддержка', description: 'Круглосуточная помощь' },
   ];
 
-  const tariffs = [
-    { name: 'Базовый', price: '0 ₽/мес', features: ['1 карта', 'Переводы', 'Мобильное приложение'] },
-    { name: 'Премиум', price: '299 ₽/мес', features: ['3 карты', 'Cashback 3%', 'Приоритетная поддержка', 'Инвестиции'] },
-    { name: 'VIP', price: '999 ₽/мес', features: ['Безлимит карт', 'Cashback 5%', 'Персональный менеджер', 'Премиум инвестиции'] },
-  ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -57,7 +53,7 @@ export default function Index() {
                 { id: 'home', label: 'Главная' },
                 { id: 'cards', label: 'Карты' },
                 { id: 'services', label: 'Услуги' },
-                { id: 'tariffs', label: 'Тарифы' },
+
                 { id: 'about', label: 'О банке' },
                 { id: 'support', label: 'Поддержка' },
                 { id: 'contacts', label: 'Контакты' }
@@ -188,58 +184,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Tariffs Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-vbank-blue/5 to-blue-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-vbank-dark mb-4" style={{ fontFamily: 'Inter' }}>
-              Тарифы
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'Roboto' }}>
-              Выберите тариф, который подходит под ваши потребности
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {tariffs.map((tariff, index) => (
-              <Card key={index} className={`relative hover:shadow-xl transition-all duration-300 ${
-                index === 1 ? 'border-2 border-vbank-blue scale-105' : 'border-0'
-              }`}>
-                {index === 1 && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-vbank-blue text-white px-4 py-1">Популярный</Badge>
-                  </div>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-xl" style={{ fontFamily: 'Inter' }}>{tariff.name}</CardTitle>
-                  <div className="text-3xl font-bold text-vbank-blue mt-2" style={{ fontFamily: 'Inter' }}>
-                    {tariff.price}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {tariff.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <Icon name="Check" size={16} className="text-green-500" />
-                        <span className="text-gray-700" style={{ fontFamily: 'Roboto' }}>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button 
-                    className={`w-full mt-6 ${
-                      index === 1 
-                        ? 'bg-vbank-blue hover:bg-blue-700' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    Выбрать тариф
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* About Section */}
       <section className="py-16 px-6 bg-white/50">
