@@ -61,7 +61,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'vbank-blue': '#0066CC',
+				'vbank-light-blue': '#1A365D',
+				'vbank-dark': '#2D3748',
+				'vbank-gray': '#AAAAAA'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
