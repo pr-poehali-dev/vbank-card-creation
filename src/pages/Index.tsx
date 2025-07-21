@@ -322,10 +322,7 @@ export default function Index() {
                         <h4 className="font-semibold text-vbank-dark mb-1" style={{ fontFamily: 'Inter' }}>
                           Адрес головного офиса
                         </h4>
-                        <p className="text-gray-600" style={{ fontFamily: 'Roboto' }}>
-                          г. Москва, ул. Тверская, д. 1<br />
-                          БЦ "Центральный", эт. 25
-                        </p>
+                        <p className="text-gray-600 font-normal" style={{ fontFamily: 'Roboto' }}></p>
                       </div>
                     </div>
                     
