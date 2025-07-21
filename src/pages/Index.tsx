@@ -18,19 +18,19 @@ export default function Index() {
       icon: 'Globe'
     },
     {
-      title: 'VILL',
-      description: 'Дебетовая карта для Венгрии',
-      features: ['Технология V-PAY', 'Только для Венгрии', 'Локальные бонусы', 'Низкие комиссии'],
-      gradient: 'from-vbank-light-blue to-slate-600',
-      icon: 'MapPin'
-    },
-    {
-      title: 'VILL V-PREMIUM',
+      title: 'VILL-PREMIUM',
       description: 'Премиальная карта для Венгрии',
       features: ['Без комиссий по всем операциям', 'Бонусы увеличены в 1,5 раза', 'Технология V-PAY', 'Премиум поддержка 24/7'],
       gradient: 'from-yellow-400 to-amber-600',
       icon: 'Crown',
       isPremium: true
+    },
+    {
+      title: 'VILL',
+      description: 'Дебетовая карта для Венгрии',
+      features: ['Технология V-PAY', 'Только для Венгрии', 'Локальные бонусы', 'Низкие комиссии'],
+      gradient: 'from-vbank-light-blue to-slate-600',
+      icon: 'MapPin'
     }
   ];
 
