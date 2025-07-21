@@ -23,6 +23,14 @@ export default function Index() {
       features: ['Технология V-PAY', 'Только для Венгрии', 'Локальные бонусы', 'Низкие комиссии'],
       gradient: 'from-vbank-light-blue to-slate-600',
       icon: 'MapPin'
+    },
+    {
+      title: 'VILL V-PREMIUM',
+      description: 'Премиальная карта для Венгрии',
+      features: ['Без комиссий по всем операциям', 'Бонусы увеличены в 1,5 раза', 'Технология V-PAY', 'Премиум поддержка 24/7'],
+      gradient: 'from-yellow-400 to-amber-600',
+      icon: 'Crown',
+      isPremium: true
     }
   ];
 
@@ -53,6 +61,7 @@ export default function Index() {
                 { id: 'home', label: 'Главная' },
                 { id: 'cards', label: 'Карты' },
                 { id: 'services', label: 'Услуги' },
+                { id: 'vpremium', label: 'V-PREMIUM' },
 
                 { id: 'about', label: 'О банке' },
                 { id: 'support', label: 'Поддержка' },
@@ -117,10 +126,19 @@ export default function Index() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {cards.map((card, index) => (
-              <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-0">
+              <Card key={index} className={`relative overflow-hidden hover:shadow-xl transition-all duration-300 ${
+                card.isPremium ? 'border-2 border-yellow-400 scale-105' : 'border-0'
+              }`}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-10`} />
+                {card.isPremium && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="bg-gradient-to-r from-yellow-400 to-amber-600 text-white px-4 py-1 font-bold">
+                      PREMIUM
+                    </Badge>
+                  </div>
+                )}
                 <CardHeader className="relative">
                   <div className="flex items-center space-x-3 mb-2">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${card.gradient} flex items-center justify-center`}>
@@ -141,7 +159,11 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full mt-6 bg-vbank-blue hover:bg-blue-700">
+                  <Button className={`w-full mt-6 ${
+                    card.isPremium 
+                      ? 'bg-gradient-to-r from-yellow-400 to-amber-600 hover:from-yellow-500 hover:to-amber-700 text-white' 
+                      : 'bg-vbank-blue hover:bg-blue-700'
+                  }`}>
                     Оформить карту
                     <Icon name="ArrowRight" size={16} className="ml-2" />
                   </Button>
